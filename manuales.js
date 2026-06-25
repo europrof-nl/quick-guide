@@ -1,6 +1,6 @@
 const manuales = [
   {
-    titulo: "Office,
+    titulo: "Office",
     categoria: "Office",
     descripcion: "Todo lo que debes saber acerca del office.",
     archivo: "manuales/apertura.pdf",
@@ -41,7 +41,7 @@ const manuales = [
   },
   {
     titulo: "Uso de máquinas materiales",
-    categoria: "Recursos",
+    categoria: "Recursos", 
     descripcion: "Cómo utilizar correctamente las máquinas.",
     archivo: "manuales/materiales.pdf",
     importante: false,
