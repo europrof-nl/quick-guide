@@ -5,7 +5,7 @@ const manuales = [
     descripcion: "Todo lo que debes saber acerca del office.",
     archivo: "manuales/apertura.pdf",
     importante: true,
-    icono: "🚪"
+    icono: "🤵🏻‍♀️"
   },
   {
     titulo: "Cocina",
@@ -13,7 +13,7 @@ const manuales = [
     descripcion: "Todo lo que debes saber acerca de la cocina.",
     archivo: "manuales/recepcion.pdf",
     importante: false,
-    icono: "👥"
+    icono: "👩🏼‍🍳"
   },
   {
     titulo: "Normas generales",
@@ -21,7 +21,7 @@ const manuales = [
     descripcion: "Normas de básicas de convivencia",
     archivo: "manuales/cierre.pdf",
     importante: true,
-    icono: "🔒"
+    icono: "👥"
   },
   {
     titulo: "Horario",
@@ -29,7 +29,7 @@ const manuales = [
     descripcion: "Horarios.",
     archivo: "manuales/normas.pdf",
     importante: false,
-    icono: "🛡️"
+    icono: "⏱️"
   },
   {
     titulo: "s",
@@ -45,6 +45,6 @@ const manuales = [
     descripcion: "Cómo utilizar correctamente las máquinas.",
     archivo: "manuales/materiales.pdf",
     importante: false,
-    icono: "📅"
+    icono: "👷🏼‍♀️"
   }
 ];
