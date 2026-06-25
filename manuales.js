@@ -40,7 +40,7 @@ const manuales = [
     icono: "✚"
   },
   {
-    titulo: "Uso de máquinas materiales",
+    titulo: "Uso de máquinas",
     categoria: "Recursos", 
     descripcion: "Cómo utilizar correctamente las máquinas.",
     archivo: "manuales/materiales.pdf",
