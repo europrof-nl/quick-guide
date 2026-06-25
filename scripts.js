@@ -1,91 +1,58 @@
-const grid=document.getElementById("manualGrid");
+const grid = document.getElementById("manualGrid");
+const buscador = document.getElementById("searchInput");
+const filtro = document.getElementById("categoryFilter");
+const featuredList = document.getElementById("featuredList");
 
-const buscador=document.getElementById("searchInput");
+function cargarCategorias() {
+  const categorias = ["Todos", ...new Set(manuales.map(m => m.categoria))];
 
-const filtro=document.getElementById("categoryFilter");
-
-function cargarCategorias(){
-
-const categorias=[
-"Todos",
-...new Set(manuales.map(x=>x.categoria))
-];
-
-filtro.innerHTML=categorias.map(c=>
-
-`<option>${c}</option>`
-
-).join("");
-
+  filtro.innerHTML = categorias
+    .map(categoria => `<option value="${categoria}">${categoria}</option>`)
+    .join("");
 }
 
-function mostrar(){
+function mostrarManuales() {
+  const texto = buscador.value.toLowerCase();
+  const categoria = filtro.value;
 
-const texto=buscador.value.toLowerCase();
+  const datos = manuales.filter(m => {
+    const coincideTexto =
+      m.titulo.toLowerCase().includes(texto) ||
+      m.descripcion.toLowerCase().includes(texto) ||
+      m.categoria.toLowerCase().includes(texto);
 
-const categoria=filtro.value;
+    const coincideCategoria =
+      categoria === "Todos" || m.categoria === categoria;
 
-const datos=manuales.filter(m=>{
+    return coincideTexto && coincideCategoria;
+  });
 
-const okTexto=
+  grid.innerHTML = datos.map(m => `
+    <article class="card ${m.importante ? "importante" : ""}">
+      <div class="icon">${m.icono}</div>
+      <h3>${m.titulo}</h3>
+      <span class="tag">${m.categoria}</span>
+      <p>${m.descripcion}</p>
+      <a class="btn" href="${m.archivo}" target="_blank">Abrir manual →</a>
+    </article>
+  `).join("");
 
-m.titulo.toLowerCase().includes(texto)||
-
-m.descripcion.toLowerCase().includes(texto)||
-
-m.categoria.toLowerCase().includes(texto);
-
-const okCategoria=
-
-categoria==="Todos"||
-
-m.categoria===categoria;
-
-return okTexto&&okCategoria;
-
-});
-
-grid.innerHTML=datos.map(m=>`
-
-<div class="card ${m.importante?"importante":""}">
-
-<div class="tag">
-
-${m.categoria}
-
-</div>
-
-<h2>
-
-${m.titulo}
-
-</h2>
-
-<p>
-
-${m.descripcion}
-
-</p>
-
-<a
-class="btn"
-target="_blank"
-href="${m.archivo}">
-
-Abrir manual
-
-</a>
-
-</div>
-
-`).join("");
-
+  if (datos.length === 0) {
+    grid.innerHTML = "<p>No se encontraron manuales.</p>";
+  }
 }
 
-buscador.addEventListener("input",mostrar);
+function mostrarDestacados() {
+  const destacados = manuales.filter(m => m.importante);
 
-filtro.addEventListener("change",mostrar);
+  featuredList.innerHTML = destacados
+    .map(m => `<li>${m.titulo}</li>`)
+    .join("");
+}
+
+buscador.addEventListener("input", mostrarManuales);
+filtro.addEventListener("change", mostrarManuales);
 
 cargarCategorias();
-
-mostrar();
+mostrarManuales();
+mostrarDestacados();

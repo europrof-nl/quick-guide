@@ -1,82 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EuroProf</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icono.png" />
+  <link rel="apple-touch-icon" href="icono.png" />
 
-<title>EuroProf</title>
-
-<link rel="stylesheet" href="styles.css">
-
-<link rel="manifest" href="manifest.json">
-
-<link rel="icon" href="icono.png">
-
-<link rel="apple-touch-icon" href="icono.png">
-
-<meta name="theme-color" content="#5B1733">
-
-<meta name="apple-mobile-web-app-capable" content="yes">
-
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-<meta name="apple-mobile-web-app-title" content="EuroProf">
-
+  <meta name="theme-color" content="#8b0038" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="EuroProf" />
 </head>
 
 <body>
+  <header class="hero">
+    <div class="hero-text">
+      <p class="kicker">Manuales y procedimientos</p>
+      <h1>europrof</h1>
+      <p>Todo lo que necesitas saber para hacer bien tu labor.</p>
+    </div>
 
-<header>
+    <div class="stars" aria-hidden="true">
+      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+    </div>
+  </header>
 
-<div class="hero">
+  <nav class="nav-card">
+    <a href="#" class="active">Inicio</a>
+    <a href="#manuales">Manuales</a>
+    <a href="#protocolos">Protocolos</a>
+    <a href="#faq">Preguntas frecuentes</a>
+    <a href="#contacto">Contactos útiles</a>
+  </nav>
 
-<h1>EuroProf</h1>
+  <main>
+    <section class="controls">
+      <input id="searchInput" type="text" placeholder="Buscar manual..." />
+      <select id="categoryFilter">
+        <option value="Todos">Todas las categorías</option>
+      </select>
+    </section>
 
-<p>
-Manuales y procedimientos para voluntarios.
-</p>
+    <section class="layout" id="manuales">
+      <div>
+        <h2 class="section-title">Todos los manuales</h2>
+        <div id="manualGrid" class="manual-grid"></div>
+      </div>
 
-</div>
+      <aside class="sidebar">
+        <h3>★ Destacados</h3>
+        <ul id="featuredList"></ul>
 
-</header>
+        <div class="quote">
+          <p>“Pequeños pasos, grandes cambios. Gracias por ser parte del voluntariado.”</p>
+          <div>★★★★★</div>
+        </div>
+      </aside>
+    </section>
+  </main>
 
-<main>
+  <footer id="contacto">
+    <div class="footer-logo">
+      europrof
+      <span>★★★★★</span>
+    </div>
 
-<div class="controls">
+    <div>
+      <h4>Navegación</h4>
+      <p>Inicio</p>
+      <p>Manuales</p>
+      <p>Protocolos</p>
+      <p>Preguntas frecuentes</p>
+    </div>
 
-<input
-id="searchInput"
-type="text"
-placeholder="Buscar manual...">
+    <div>
+      <h4>Recursos</h4>
+      <p>Documentos importantes</p>
+      <p>Guías rápidas</p>
+      <p>Formularios</p>
+    </div>
 
-<select id="categoryFilter">
+    <div>
+      <h4>¿Dudas?</h4>
+      <p>info@europrof.org</p>
+    </div>
+  </footer>
 
-<option value="Todos">
-Todas las categorías
-</option>
-
-</select>
-
-</div>
-
-<section
-id="manualGrid"
-class="manual-grid">
-
-</section>
-
-</main>
-
-<footer>
-
-EuroProf © 2026
-
-</footer>
-
-<script src="manuales.js"></script>
-<script src="script.js"></script>
-
+  <script src="manuales.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
