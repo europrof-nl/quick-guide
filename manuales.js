@@ -1,48 +1,48 @@
 const manuales = [
   {
-    titulo: "Cómo abrir el local",
-    categoria: "Apertura",
-    descripcion: "Procedimiento para preparar el lugar antes de iniciar actividades.",
+    titulo: "Office,
+    categoria: "Office",
+    descripcion: "Todo lo que debes saber acerca del office.",
     archivo: "manuales/apertura.pdf",
     importante: true,
     icono: "🚪"
   },
   {
-    titulo: "Recepción de visitantes",
-    categoria: "Atención",
-    descripcion: "Cómo recibir correctamente a las personas que llegan.",
+    titulo: "Cocina",
+    categoria: "Cocina",
+    descripcion: "Todo lo que debes saber acerca de la cocina.",
     archivo: "manuales/recepcion.pdf",
     importante: false,
     icono: "👥"
   },
   {
-    titulo: "Cierre del local",
-    categoria: "Cierre",
-    descripcion: "Checklist antes de abandonar las instalaciones.",
+    titulo: "Normas generales",
+    categoria: "Convivencia",
+    descripcion: "Normas de básicas de convivencia",
     archivo: "manuales/cierre.pdf",
     importante: true,
     icono: "🔒"
   },
   {
-    titulo: "Normas generales",
+    titulo: "Horario",
     categoria: "Protocolos",
-    descripcion: "Reglas básicas de convivencia, seguridad y responsabilidad.",
+    descripcion: "Horarios.",
     archivo: "manuales/normas.pdf",
     importante: false,
     icono: "🛡️"
   },
   {
-    titulo: "Actuación en emergencias",
+    titulo: "s",
     categoria: "Seguridad",
-    descripcion: "Pasos a seguir en caso de emergencia o incidente.",
+    descripcion: "...te.",
     archivo: "manuales/emergencias.pdf",
     importante: true,
     icono: "✚"
   },
   {
-    titulo: "Uso de espacios y materiales",
+    titulo: "Uso de máquinas materiales",
     categoria: "Recursos",
-    descripcion: "Cómo utilizar correctamente los espacios y materiales.",
+    descripcion: "Cómo utilizar correctamente las máquinas.",
     archivo: "manuales/materiales.pdf",
     importante: false,
     icono: "📅"
