@@ -33,7 +33,7 @@ function mostrarManuales() {
       <h3>${m.titulo}</h3>
       <span class="tag">${m.categoria}</span>
       <p>${m.descripcion}</p>
-      <a class="btn" href="${m.archivo}" target="_blank">Abrir manual →</a>
+      <a class="btn" href="${m.archivo}" target="_blank">→</a>
     </article>
   `).join("");
 

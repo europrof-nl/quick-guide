@@ -52,33 +52,28 @@ Manuales de Office
 
 <div class="card">
 
-<div class="icon">📋</div>
+<div class="icon">☕️</div>
 
-<h3>Recepción</h3>
+<h3>Desayuno - BM (shift 19:00 - 20:00)</h3>
 
 <p>
-Cómo recibir visitantes.
+Cómo poner el desayuno
 </p>
 
-<a
-class="btn"
-href="manuales/office/recepcion.pdf"
-target="_blank">
-
-Abrir PDF
-
-</a>
+<button class="btn" onclick="abrirDesayuno()">
+Ver instrucciones
+</button>
 
 </div>
 
 <div class="card">
 
-<div class="icon">☎️</div>
+<div class="icon">🍲</div>
 
-<h3>Teléfono</h3>
+<h3>Comida</h3>
 
 <p>
-Cómo contestar llamadas.
+Cómo poner la comida.
 </p>
 
 <a
@@ -94,12 +89,12 @@ Abrir PDF
 
 <div class="card">
 
-<div class="icon">💻</div>
+<div class="icon">🥛</div>
 
-<h3>Computadora</h3>
+<h3>Cena y Merienda</h3>
 
 <p>
-Configuración básica.
+Cómo poner la cena y la merienda
 </p>
 
 <a
@@ -116,6 +111,66 @@ Abrir PDF
 </div>
 
 </main>
+
+<!-- Ventana emergente -->
+
+<div id="modalDesayuno" class="modal">
+
+    <div class="modal-contenido">
+
+        <span class="cerrar"
+              onclick="cerrarDesayuno()">
+
+            ×
+
+        </span>
+
+        <h2>
+            ☕ Desayuno
+        </h2>
+
+        <p>
+
+            Esta es la forma correcta de poner la mesa.
+
+        </p>
+
+        <img
+            src="desayuno.png"
+            alt="Desayuno"
+            class="imagen-manual">
+
+    </div>
+
+</div>
+
+<script>
+
+function abrirDesayuno(){
+
+document.getElementById("modalDesayuno").style.display="flex";
+
+}
+
+function cerrarDesayuno(){
+
+document.getElementById("modalDesayuno").style.display="none";
+
+}
+
+window.onclick=function(event){
+
+const modal=document.getElementById("modalDesayuno");
+
+if(event.target===modal){
+
+modal.style.display="none";
+
+}
+
+}
+
+</script>
 
 </body>
 
