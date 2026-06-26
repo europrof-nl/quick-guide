@@ -3,7 +3,7 @@ const manuales = [
     titulo: "Office",
     categoria: "Office",
     descripcion: "Todo lo que debes saber acerca del office.",
-    archivo: "manuales/apertura.pdf",
+    archivo: "office.html",
     importante: true,
     icono: "🤵🏻‍♀️"
   },
@@ -16,7 +16,7 @@ const manuales = [
     icono: "👩🏼‍🍳"
   },
   {
-    titulo: "Normas generales",
+    titulo: "Puntos a tomar en cuenta",
     categoria: "Convivencia",
     descripcion: "Normas de básicas de convivencia",
     archivo: "manuales/cierre.pdf",
